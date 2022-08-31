@@ -55,3 +55,4 @@ async function runScript() {
     await driver.takeScreenshot();
 
 };
+

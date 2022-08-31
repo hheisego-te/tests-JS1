@@ -52,6 +52,7 @@ async function runScript() {
 };
 
 
+
 /*
 
     let board = await driver.findElement(By.className("su-board"));
