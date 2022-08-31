@@ -1,0 +1,132 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+import { By, Key, until } from 'selenium-webdriver';
+import { driver, test, credentials, markers } from 'thousandeyes';
+
+runScript();
+
+async function runScript() {
+
+    await configureDriver();
+
+    const settings = test.getSettings();
+
+    // Load page
+    await driver.get(settings.url);
+    await driver.takeScreenshot();
+
+    
+    for (let ele of check) {
+
+        let location = ele;
+
+        if (ele.getText = 'LOCATIONS') {
+
+            //console.log(await ele.isDisplayed());
+
+            // console.log(await driver.wait(until.elementIsVisible(element)));
+            //console.log(await element.getShadowRoot());
+            //await driver.wait(until.elementLocated(element));
+
+            while (await ele.isDisplayed() == true) {
+
+
+
+                break;
+            }
+            ele.click();
+
+        } else {
+
+            console.log("no shut");
+
+        }
+
+    }
+
+        //await driver.findElement(By.className("submit")).click(); //lol this is a father element for the link
+    
+    //await driver.findElement(By.name("textBoxLocationSearch")).sendKeys("76105", Key.ENTER, Key.PAGE_DOWN);
+    //let busqueda = await driver.findElement(By.id("searchNear"));
+    //await driver.wait(until.elementIsVisible(busqueda), 5000);
+    //await driver.wait(until.urlContains("&location-search_a=76105"), 7777);
+    //await driver.sleep(5678);
+    
+
+    // Load page
+    //await driver.get(settings.url);
+
+ Search
+    markers.start('SearchForWebdriver');
+    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
+    await driver.takeScreenshot();
+    markers.stop('SearchForWebdriver');
+    
+    // Wait for full page load
+    await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
+    await driver.takeScreenshot();*/
+    
+    
+    //await window.getComputedStyle(driver.findElement(By.xpath('//*[@title="Locations"]'))).click();
+    //let check = await driver.findElement(By.xpath('//*[@title="Locations"]'));
+    //let check = driver.findElement(By.("Locations::after"));
+
+    //let aelement = await driver.findElements(By.tagName("a"));
+    //let check = await driver.findElements(By.xpath('//*[@title="Locations"]'));
+    let check = await driver.findElements(By.css('a'));
+    //document.querySelector("#header-nav > div > div > div > div.col.d-none.d-lg-block > div > div > div > nav > ul > li.level1.item1.even.rel-level1 > div > a")
+    await driver.findElement(By.xpath('//*[@id="header-nav"]/div/div/div/div[2]/div/div/div/nav/ul/li[2]/div/a')).click();
+
+
+    await driver.sleep(1000);
+
+    //driver.quit();
+
+    //await driver.manage(window.scrollBy(0, 400));
+    //await driver.wait(until.is(By.className("component search-results vertical profile locations col-12")), 1000);
+    //await driver.wait(until.elementIsVisible, 3333);
+    //(By.className("component search-results vertical profile locations col-12"))
+    //await driver.takeScreenshot();
+  
+    
+
+
+
+       let board = await driver.findElement(By.className("su-board"));
+    let elements = await board.findElements(By.css('div'));
+    
+
+    for (let ele of elements) {
+
+        //console.log(await ele.getAttribute("aria-label"));
+
+        if (await ele.getAttribute("aria-label") == "empty"){
+
+            let empties = await ele.findElements(By.css('div'));
+            
+
+
+        }else{
+
+            console.log("no");
+        }
+
+    }
+    
+
+
+*/
