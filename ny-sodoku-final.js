@@ -10,7 +10,7 @@ async function runScript() {
 
     await driver.get('https://www.nytimes.com/puzzles/sudoku/easy');
 
-    await driver.wait(1000);
+    await driver.sleep(1111);
 
 
     let board2 = await driver.findElement(By.id("pz-game-root"));
@@ -20,19 +20,22 @@ async function runScript() {
 
     for (let ele of qlick) {
 
-        let almost = await ele.getRect();
-        console.log(almost);
-
+        //let almost = await ele.getRect();
+        
+        await driver.sleep(777);
         await driver.actions().click(ele).perform().then(function () {
-            driver.findElement(By.css('.pz-dropdown:nth-child(2) .pz-dropdown__label')).click().then(function () {
-
+            driver.findElement(By.css('.pz-dropdown:nth-child(2) .pz-dropdown__label')).click().then(function () { 
+            driver.sleep(777);
                 try {
 
-                    driver.findElement(By.css(".pz-dropdown__menu-item:nth-child(4) > .pz-dropdown__button")).click();
+
+                    return driver.findElement(By.css(".pz-dropdown__menu-item:nth-child(4) > .pz-dropdown__button")).click();
+
 
                 } catch (excep) {
 
                     console.log(excep);
+                    //console.log(almost);
 
                 }
 
@@ -45,7 +48,7 @@ async function runScript() {
         });
 
 
-        await driver.findElement(B)
+        //await driver.findElement(B)
 
 
     }

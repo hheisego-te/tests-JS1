@@ -6,7 +6,6 @@ runScript();
 async function runScript() {
 
     const settings = test.getSettings();
-    //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     driver.manage().window().maximize();
     await driver.get('https://www.texashealth.org/');
     await driver.sleep(2345);
